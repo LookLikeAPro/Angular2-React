@@ -9,7 +9,7 @@ This assumes the user is using webpack/browserify tooling
 	npm install angular2-react --save
 	tsd install react react-dom --save
 
-Creating a react component (MyComponent.jsx):
+Creating a react component (MyComponent.tsx):
 
 	import React from "angular2-react/react";
 	// More conveinent than `import * as React from "react"`
