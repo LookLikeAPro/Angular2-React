@@ -1,0 +1,15 @@
+{
+  "name": "angular2-react",
+  "version": "0.0.1",
+  "description": "Angular2 component used to embed react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular2",
+    "react"
+  ],
+  "author": "looklikeapro",
+  "license": "MIT"
+}
