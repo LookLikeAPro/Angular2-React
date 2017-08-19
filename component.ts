@@ -1,14 +1,12 @@
-import React from "./react";
-import {Component} from 'angular2/core';
+import { React, ReactDOM } from "./react";
+import { Component, Input, OnInit, OnChanges, AfterViewInit } from '@angular/core';
 
 @Component({
     selector: 'react-component',
-    template:
-		'<div [id]="id">wrapper</div>'
-    ,
+    template: '<div [id]="id">wrapper</div>',
     inputs: ['component', 'props']
 })
-export class ReactComponent {
+export class ReactComponent implements OnInit, OnChanges, AfterViewInit {
     component: any;
     props: Object;
     id: number;
@@ -18,14 +16,12 @@ export class ReactComponent {
     }
     ngAfterViewInit() {
         this.drawNode = document.getElementById(this.id.toString());
-		this.render();
+    	this.render();
     }
     ngOnChanges() {
-        if (this.drawNode) {
-			this.render();
-        }
+        if (this.drawNode) this.render();
     }
     render() {
-		React.render(React.createElement(this.component, this.props), this.drawNode);
+    	ReactDOM.render(React.createElement(this.component, this.props), this.drawNode)
     }
 }
